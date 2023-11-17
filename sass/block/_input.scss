@@ -1,0 +1,23 @@
+.wrapper-input {
+    position: relative;
+    display: inline-block;
+    max-width: 335px;
+    height: 47px;
+    width: 100%;
+}
+.input {
+    padding: 7px 12px;
+    font-size: 30px;
+    border-radius: 20px;
+
+    &--search{
+        width: 600px;
+    }
+    
+    &--add{
+        
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

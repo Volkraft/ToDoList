@@ -9,7 +9,7 @@ body {
 	display: flex; /* sticky footer */
 	flex-direction: column; /* sticky footer */
 
-	font-family: "gilroy";
+	font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
     line-height: 1.6875;
     color: $colorText;
@@ -19,6 +19,7 @@ body {
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+    background-color: $background;
 }
 
 body > * {
@@ -40,7 +41,7 @@ footer{
 /* Grid styles */
 
 .container {
-	max-width: 1609px;
+	max-width: 1440px;
     width: 100%;
 	margin-left: auto;
     margin-right: auto;

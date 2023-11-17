@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -93,7 +94,7 @@ body {
   min-height: 100vh; /* sticky footer */
   display: flex; /* sticky footer */
   flex-direction: column; /* sticky footer */
-  font-family: "gilroy";
+  font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6875;
   color: #ffffff;
@@ -102,6 +103,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background-color: #B7D3F2;
 }
 
 body > * {
@@ -121,7 +123,7 @@ footer {
 
 /* Grid styles */
 .container {
-  max-width: 1609px;
+  max-width: 1440px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -181,4 +183,103 @@ select:-webkit-autofill:focus {
 /* Sticky Footer */
 .footer {
   margin-top: auto; /* sticky footer */
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.wrapper-input {
+  position: relative;
+  display: inline-block;
+  max-width: 335px;
+  height: 47px;
+  width: 100%;
+}
+
+.input {
+  padding: 7px 12px;
+  font-size: 30px;
+  border-radius: 20px;
+}
+.input--search {
+  width: 600px;
+}
+.input--add {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn-action {
+  background: #F00 !important;
+  border-radius: 25px;
+  font-size: 25px;
+  color: #ffffff;
+}
+.btn-action--add {
+  padding: 11px 18px;
+  position: absolute;
+  top: 0;
+  right: -2px;
+}
+.btn-action--remove {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  padding: 12px 10px;
+}
+
+.header {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #8A84E2;
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  -moz-column-gap: 20%;
+       column-gap: 20%;
+}
+
+.notes-control {
+  padding: 20px;
+  background-color: #AFAFDC;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.list-notes__item {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.list-notes__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.list-notes__text {
+  color: black;
+  min-height: 47px;
+  max-height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  direction: rtl;
+  padding: 10px 109px 0 15px;
+}
+.list-notes__text::-webkit-scrollbar {
+  width: 6px; /* ширина scrollbar */
+}
+.list-notes__text::-webkit-scrollbar-track {
+  background-color: rgba(82, 82, 82, 0.1450980392);
+}
+.list-notes__text::-webkit-scrollbar-thumb {
+  background-color: #FF5353; /* цвет плашки */
+  border-radius: 20px; /* закругления плашки */
 }/*# sourceMappingURL=main.css.map */

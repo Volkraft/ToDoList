@@ -1,0 +1,21 @@
+.btn-action {
+    background: #F00 !important;
+    border-radius: 25px;
+    font-size: 25px;
+    color: $colorText;
+    
+    &--add{
+        padding: 11px 18px;
+        position: absolute;
+        top: 0;
+        right: -2px;
+    }
+
+    &--remove{
+        position: absolute;
+        top: 0;
+        right: -2px;
+        padding: 12px 10px;
+
+    }
+}
