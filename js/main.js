@@ -21,6 +21,7 @@ function renderNote(e){
         </li>
         `;
         listNotes.insertAdjacentHTML('afterbegin', newNote);
+        inputAdd.value = '';
     } 
     else {
         inputAdd.style.border = '2px solid red'
@@ -32,4 +33,9 @@ function renderNote(e){
 
 // события
 form.addEventListener('submit', renderNote);
+inputAdd.addEventListener('input', function(){
+    if (inputAdd.value.length > 0) {
+        inputAdd.style.borderColor = 'transparent'
+    };
+});
 
