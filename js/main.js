@@ -9,6 +9,9 @@ const listNotes = document.querySelector('#listNotes');
 
 
 // Функции
+
+
+// Функция рендера
 function renderNote(e){
     e.preventDefault();
 
@@ -27,9 +30,16 @@ function renderNote(e){
         inputAdd.style.border = '2px solid red'
     };
     
-}
+};
 
+// Функция удаление из разметки
 
+listNotes.addEventListener('click', (e) => {
+    const currentBtnRemove = e.target;
+    if (currentBtnRemove.classList.contains('btn-action--remove')) {
+        currentBtnRemove.parentNode.remove()
+    }
+})
 
 // события
 form.addEventListener('submit', renderNote);
