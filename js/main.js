@@ -6,6 +6,7 @@
 const form = document.querySelector('#form');
 const inputAdd = form.querySelector('#inputAdd');
 const listNotes = document.querySelector('#listNotes');
+const inputSearch = document.querySelector('#inputSearch');
 
 
 // Функции
@@ -41,6 +42,18 @@ listNotes.addEventListener('click', (e) => {
     }
 })
 
+// Фильтрация
+function filterNotes(e){
+    let searchValueLowerCase = e.target.value.toLowerCase();
+    const allTextList = listNotes.querySelectorAll('.list-notes__text');
+    allTextList.forEach((str) =>{
+        const strLowerCase = str.textContent.toLowerCase();
+        if (strLowerCase.indexOf(searchValueLowerCase) != -1){
+            
+        }
+    })
+}
+
 // события
 form.addEventListener('submit', renderNote);
 inputAdd.addEventListener('input', function(){
@@ -48,4 +61,4 @@ inputAdd.addEventListener('input', function(){
         inputAdd.style.borderColor = 'transparent'
     };
 });
-
+inputSearch.addEventListener('keyup', filterNotes);
