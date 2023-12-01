@@ -1,7 +1,3 @@
-// Найти форму прослушать событие
-// Получение текста из инпута
-// сгенерировать заметку
-
 // переменные
 const form = document.querySelector('#form');
 const inputAdd = form.querySelector('#inputAdd');
@@ -28,19 +24,19 @@ function renderNote(e){
         inputAdd.value = '';
     } 
     else {
-        inputAdd.style.border = '2px solid red'
+        alertInput()
     };
     
 };
 
 // Функция удаление из разметки
-
-listNotes.addEventListener('click', (e) => {
+function removeNoteFromRender(e){
     const currentBtnRemove = e.target;
     if (currentBtnRemove.classList.contains('btn-action--remove')) {
-        currentBtnRemove.parentNode.remove()
-    }
-})
+        currentBtnRemove.parentNode.remove();
+    };
+};
+
 
 // Фильтрация
 function filterNotes(e){
@@ -56,13 +52,21 @@ function filterNotes(e){
         }
         
     })
+};
+
+// Подсветка инпута 
+function inputTransperent(){
+    if (inputAdd.value.length > 0) {
+        inputAdd.style.borderColor = 'transparent'
+    };
+};
+
+function alertInput(){
+    inputAdd.style.border = '2px solid red'
 }
 
 // события
 form.addEventListener('submit', renderNote);
-inputAdd.addEventListener('input', function(){
-    if (inputAdd.value.length > 0) {
-        inputAdd.style.borderColor = 'transparent'
-    };
-});
+inputAdd.addEventListener('input', inputTransperent);
 inputSearch.addEventListener('keyup', filterNotes);
+listNotes.addEventListener('click', removeNoteFromRender);
