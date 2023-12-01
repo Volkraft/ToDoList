@@ -16,7 +16,7 @@ const inputSearch = document.querySelector('#inputSearch');
 function renderNote(e){
     e.preventDefault();
 
-    if (inputAdd.value.length > 0) {
+    if (inputAdd.value.trim().length > 0) {
         const newNote = 
         `
         <li class="list-notes__item">
@@ -49,8 +49,12 @@ function filterNotes(e){
     allTextList.forEach((str) =>{
         const strLowerCase = str.textContent.toLowerCase();
         if (strLowerCase.indexOf(searchValueLowerCase) != -1){
-            
+            str.closest('.list-notes__item').style.display = 'flex'
         }
+        else{
+            str.closest('.list-notes__item').style.display = 'none'
+        }
+        
     })
 }
 
