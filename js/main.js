@@ -40,6 +40,8 @@ function removeNoteFromRender(e){
     const currentBtnRemove = e.target;
     if (currentBtnRemove.classList.contains('btn-action--remove')) {
         currentBtnRemove.parentNode.remove();
+
+        deleteFromArray(e)
     };
 };
 
@@ -66,21 +68,21 @@ function inputTransperent(){
         inputAdd.style.borderColor = 'transparent'
     };
 };
-
+// Подсветка не правильной валидации
 function alertInput(){
     inputAdd.style.border = '2px solid red'
 }
-
+// Пуш заметки в массив
 function pushNote(){
     if (allNotes){
         allNotes.push(inputAdd.value)
     }
 }
-
+// Сохраням в localStorage
 function saveStorage(){
     localStorage.setItem('DataBase', JSON.stringify(allNotes));
 }
-
+// функция рендеринга из localStorage
 function renderStorage(){
     allNotes.forEach((note) => {
         const noteFromArray = 
@@ -93,6 +95,11 @@ function renderStorage(){
         listNotes.insertAdjacentHTML('afterbegin', noteFromArray);
 
     })
+}
+// функция удаления из localStorage
+function deleteFromArray(e){
+    allNotes.splice(allNotes.indexOf(e.target.previousElementSibling.innerText), 1);
+    saveStorage();
 }
 
 // события
@@ -118,4 +125,13 @@ listNotes.addEventListener('click', removeNoteFromRender);
 // console.log(resultFromStorage)
 // const parseString = JSON.parse(resultFromStorage);
 // console.log(parseString);
-
+// const fruits = [
+//     'Яблоко',
+//     'Банан',
+//     'Помидор',
+//     'Мандарин',
+//     'Апельсин',
+//     'Лимон',
+// ]
+// let index = fruits.indexOf('Мандарин')
+// console.log(index);
