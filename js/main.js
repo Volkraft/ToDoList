@@ -135,3 +135,16 @@ listNotes.addEventListener('click', removeNoteFromRender);
 // ]
 // let index = fruits.indexOf('Мандарин')
 // console.log(index);
+
+// function Cars(model, color, cost){
+//     this.model = model;
+//     this.color = color;
+//     this.cost = cost;
+//     this.aboutCar = () => {
+//         alert(`Это машина стоит ${this.cost}, цвет ${this.color}, модель ${this.model}`)
+//     } 
+// }
+
+// const BMW = new Cars("X7", "Blue", "18450000")
+// BMW.aboutCar()
+// console.log(BMW);
