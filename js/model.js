@@ -15,6 +15,7 @@ export default class Model {
     pushNote(text){
         this.allNotes.push(text)
         this.saveStorage()
+        return text
     }
 
     saveStorage(){

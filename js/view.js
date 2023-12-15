@@ -10,4 +10,15 @@ export default class View {
         listNotes: document.querySelector('#listNotes'),
         inputSearch: document.querySelector('#inputSearch'),
     }
+
+    render(note){
+        const noteFromArray = 
+        `
+        <li class="list-notes__item">
+            <p class="list-notes__text">${note}</p>
+            <button class="btn-action btn-action--remove">Remove</button>
+        </li>
+        `;
+        listNotes.insertAdjacentHTML('afterbegin', noteFromArray);
+    }
 }
