@@ -2,7 +2,7 @@ import Model from "./model.js";
 import View from "./view.js";
 
 const model = new Model();
-const view = new View();
+const view = new View(model.allNotes);
 
 view.elementControll.form.addEventListener('submit', (e) => {
     
