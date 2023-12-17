@@ -21,4 +21,11 @@ export default class Model {
     saveStorage(){
         localStorage.setItem('DataBase', JSON.stringify(this.allNotes));
     }
+
+    removeFromArray(innerText){
+        const indexNote = this.allNotes.indexOf(innerText)
+        this.allNotes.splice(indexNote, 1)
+        this.saveStorage()
+    }
+
 }
