@@ -25,3 +25,11 @@ view.elementControll.inputAdd.addEventListener('input', () => {
             
     } 
 })
+
+view.elementControll.listNotes.addEventListener('click', (e) => {
+    const currentBtnRemove = e.target;
+    if(currentBtnRemove.classList.contains('btn-action--remove')) {
+        const note = currentBtnRemove.closest('.list-notes__item')
+        view.removeFromRender(note)
+    }
+})

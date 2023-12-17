@@ -36,4 +36,8 @@ export default class View {
     clearInput(){
         this.elementControll.inputAdd.value = ''
     }
+
+    removeFromRender(note){
+        note.remove()
+    }
 }
