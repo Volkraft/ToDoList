@@ -22,5 +22,18 @@ export default class View {
         </li>
         `;
         listNotes.insertAdjacentHTML('afterbegin', noteFromArray);
+        
+    }
+
+    alertInput(){
+        this.elementControll.inputAdd.style.border = '2px solid red'
+    }
+
+    inputTransperent(){
+        this.elementControll.inputAdd.style.border = '2px solid transparent'
+    };
+
+    clearInput(){
+        this.elementControll.inputAdd.value = ''
     }
 }
