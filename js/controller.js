@@ -34,3 +34,9 @@ view.elementControll.listNotes.addEventListener('click', (e) => {
         view.removeFromRender(note)
     }
 })
+
+view.elementControll.inputSearch.addEventListener('keyup', (e) =>{
+    let searchValueLowerCase = e.target.value.toLowerCase();
+    const allTextList = view.elementControll.listNotes.querySelectorAll('.list-notes__text');
+    view.filterNotes(searchValueLowerCase, allTextList)
+})

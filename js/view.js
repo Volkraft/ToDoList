@@ -40,4 +40,17 @@ export default class View {
     removeFromRender(note){
         note.remove()
     }
+
+    filterNotes(searchValueLowerCase, allTextList){
+        allTextList.forEach((str) =>{
+            const strLowerCase = str.textContent.toLowerCase();
+            if (strLowerCase.indexOf(searchValueLowerCase) != -1){
+                str.closest('.list-notes__item').style.display = 'flex'
+            }
+            else{
+                str.closest('.list-notes__item').style.display = 'none'
+            }
+            
+        })
+    }
 }

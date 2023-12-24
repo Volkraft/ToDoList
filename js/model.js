@@ -27,5 +27,4 @@ export default class Model {
         this.allNotes.splice(indexNote, 1)
         this.saveStorage()
     }
-
 }
